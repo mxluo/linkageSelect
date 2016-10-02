@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+</body>
+<script src="jquery-1.11.3.min.js"></script>
+<script src="linkageSelect.jquery.js"></script>
+<script>
+$(function() {
+    var demo = $('#demo');
+    var options = {
+        'data': {
+            'from': 'ajax',
+            'method': 'get',
+            'requestKey': 'id'
+        },
+        'selects': [
+            {'id':'sel1', 'url':'tmp/1.json'},
+            {'id':'sel2', 'url':'tmp/2.json'},
+            {'id':'sel3', 'url':'tmp/3.json'},
+            {'id':'sel4', 'url':'tmp/1.json'},
+            {'id':'sel5', 'url':'tmp/2.json'},
+        ]
+    }
+    demo.linkageSelect(options);    
+});
+
+</script>
+</html>
